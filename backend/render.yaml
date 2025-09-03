@@ -1,0 +1,11 @@
+# render.yaml opcional (Blueprint). Puedes desplegar solo con el Dockerfile también.
+services:
+  - type: web
+    name: feasyfactura
+    env: docker
+    autoDeploy: true
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
